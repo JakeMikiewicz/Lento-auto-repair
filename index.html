@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lento Auto Repair</title>
+  <link rel="stylesheet" href="styles.css">
+  
+	<script type="application/ld+json"> {
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Lento Auto Repair",
+  "image": "assets/logo.svg",
+  "telephone": "+1-847-233-0397",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9301 Byron Street",
+    "addressLocality": "Schiller Park",
+    "addressRegion": "IL",
+    "postalCode": "60176",
+    "addressCountry": "US"
+  },
+	  "openingHoursSpecification": [
+		{
+		  "@type": "OpeningHoursSpecification",
+		  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+		  "opens": "09:00",
+		  "closes": "19:00"
+		}
+	  ]
+	}
+	</script>
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Lento Auto Repair</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home">
+    <div class="hero">
+      <h2>Your Local Auto Body Experts</h2>
+      <p>Trusted repairs and maintenance in your neighborhood.</p>
+    </div>
+  </section>
+
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <h3>Engine Repair</h3>
+        <p>Comprehensive engine diagnostics and repair to keep you running smoothly.</p>
+      </div>
+      <div class="card">
+        <h3>Brake Service</h3>
+        <p>Safety first—expert brake inspections and replacements.</p>
+      </div>
+      <div class="card">
+        <h3>Oil Changes</h3>
+        <p>Quick and affordable oil changes to extend your vehicle’s life.</p>
+      </div>
+      <div class="card">
+        <h3>Collision Repair</h3>
+        <p>Accident damage? We’ll restore your car to like-new condition.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>Lento Auto Repair has been serving the community for over 20 years. Our certified technicians are dedicated to providing quality service with honesty and care. We treat every car like it’s our own.</p>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> 9301 Byron Street</p>
+		<p><strong>Phone:</strong> (847) 233-0397</p>
+		<p><strong>Hours:</strong> Mon–Fri 9:00–7:00</p>
+		<p>
+		<a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=9301+Byron+Street" target="_blank" rel="noopener">Open in Google Maps</a>
+		</p>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email">
+			<input type="phone" placeholder="Your Phone" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lento Auto Repair. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
