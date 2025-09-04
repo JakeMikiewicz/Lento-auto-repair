@@ -20,35 +20,42 @@
 	<meta name="twitter:title" content="Lento Auto Repair — Schiller Park, IL" />
 	<meta name="twitter:description" content="Collision repair, diagnostics, and maintenance with fair pricing and a 24-month warranty. Open Mon–Fri 9am–7pm." />
 	<meta name="twitter:image" content="assets/og-image.png" />
+	<meta name="description" content="Auto body & mechanical repair in Schiller Park, IL. Collision, diagnostics, and maintenance with fair pricing and a 24-month warranty. Open Mon–Fri 9am–7pm." />
+	<meta name="theme-color" content="#222222" />
+	
+	<link rel="canonical" href="https://github.com/JakeMikiewicz/Lento-auto-repair">
+	<meta property="og:url" content="https://github.com/JakeMikiewicz/Lento-auto-repair">
   
-	<script type="application/ld+json"> {
-{
-  "@context": "https://schema.org",
-  "@type": "AutoRepair",
-  "name": "Lento Auto Repair",
-  "image": "assets/logo.svg",
-  "telephone": "+1-847-233-0397",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "9301 Byron Street",
-    "addressLocality": "Schiller Park",
-    "addressRegion": "IL",
-    "postalCode": "60176",
-    "addressCountry": "US"
-  },
-	  "openingHoursSpecification": [
-		{
-		  "@type": "OpeningHoursSpecification",
-		  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-		  "opens": "09:00",
-		  "closes": "19:00"
-		}
-	  ]
+	<!-- JSON-LD structured data for Lento Auto Repair -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "AutoRepair",
+		"name": "Lento Auto Repair",
+		"image": "assets/logo.svg",
+		"telephone": "+1-847-233-0397",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "9301 Byron Street",
+			"addressLocality": "Schiller Park",
+			"addressRegion": "IL",
+			"postalCode": "60176",
+			"addressCountry": "US"
+		},
+		"openingHoursSpecification": [
+			{
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+				"opens": "09:00",
+				"closes": "19:00"
+			}
+		]
 	}
 	</script>
-  
 </head>
+
 <body>
+	<a class="visually-hidden" href="#main">Skip to content</a>
   <header>
     <div class="container">
       <h1>Lento Auto Repair</h1>
@@ -62,7 +69,7 @@
       </nav>
     </div>
   </header>
-
+	<main id="main">
   <section class="hero section">
   <div class="container hero-grid">
     <div>
@@ -142,32 +149,85 @@
 		</div>
 	</section>
 
-  <section id="about" class="section">
-		<div class="container grid cols-2">
-			<div class="reveal">
-				<h2>About</h2>
-				<h3>Family-owned. Community-trusted.</h3>
-				<p>We believe in straight talk and workmanship that lasts. Our ASE-certified team documents repairs with photos and keeps you informed at every step. Every qualifying repair is backed by a 24-month warranty.</p>
-				<ul>
-					<li>ASE-certified technicians</li>
-					<li>Digital vehicle inspections (photos & notes)</li>
-					<li>Fair, written estimates—no surprises</li>
-				</ul>
-			</div>
+	<section id="contact" class="section">
+		<div class="container">
+			<h2>Book an appointment</h2>
+			<div class="contact-grid">
+				<!-- Form -->
+				<form id="contact-form" class="card" method="POST"
+							action="https://formspree.io/f/your-id" novalidate>
+					<!-- Honeypot (spam trap) -->
+					<input type="text" name="website" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+					<div class="form-row">
+					
+						<div>
+							<label for="name">Full name *</label>
+							<input id="name" name="name" autocomplete="name" required />
+						</div>
+						<div>
+							<label for="email">Email *</label>
+							<input id="email" name="email" type="email" autocomplete="email" required />
+						</div>
+					</div>
+					<div class="form-row">
+						<div>
+							<label for="phone">Phone *</label>
+							<input id="phone" name="phone" type="tel" autocomplete="tel" required />
+						</div>
+						<div>
+							<label for="date">Preferred date</label>
+							<input id="date" name="date" type="date" />
+						</div>
+					</div>
+					<div class="form-row">
+						<div>
+							<label for="vehicle">Vehicle (year/make/model) *</label>
+							<input id="vehicle" name="vehicle" placeholder="e.g., 2018 Honda Civic" required />
+						</div>
+						<div>
+							<label for="service">Service</label>
+							<select id="service" name="service">
+								<option>Diagnostic</option>
+								<option>Brakes</option>
+								<option>Body/Paint</option>
+								<option>Maintenance</option>
+								<option>Other</option>
+							</select>
+						</div>
+					</div>
+					<label for="message">Describe the issue</label>
+					<textarea id="message" name="message" rows="4" placeholder="What are you experiencing? Any warning lights?"></textarea>
 
-			<div class="card reveal" aria-label="Quick facts">
-				<h3>Quick facts</h3>
-				<ul>
-					<li>Location: 9301 Byron Street, Schiller Park, IL 60176</li>
-					<li>Hours: Mon–Fri, 9:00am–7:00pm</li>
-					<li>Phone: <a href="tel:+18472330397">(847) 233-0397</a></li>
-					<li>Insurance: We handle claims with major providers</li>
-					<li>Loaners/Rides: Available on request</li>
-				</ul>
+					<div class="form-actions">
+						<button class="btn" type="submit">Send request</button>
+						<span class="note">We’ll confirm within 1 business day.</span>
+					</div>
+
+					<!-- Live status for screen readers -->
+					<p id="formStatus" class="visually-hidden" aria-live="polite"></p>
+				</form>
+
+				<!-- Map + contact details -->
+				<aside class="card">
+					<h3>Location & Hours</h3>
+					<p><strong>Address:</strong> 9301 Byron Street, Schiller Park, IL 60176</p>
+					<p><strong>Phone:</strong> <a href="tel:+18472330397">(847) 233-0397</a></p>
+					<p><strong>Hours:</strong> Mon–Fri 9:00–7:00</p>
+					<p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=9301+Byron+St%2C+Schiller+Park%2C+IL+60176" target="_blank" rel="noopener">Open in Google Maps</a></p>
+
+					<!-- Embed: privacy note — this loads Google content -->
+					<div style="border-radius:12px; overflow:hidden; border:1px solid #ddd">
+						<iframe
+							title="Map to Lento Auto Repair"
+							width="100%" height="220" style="border:0"
+							loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+							src="https://www.google.com/maps?q=9301+Byron+St,+Schiller+Park,+IL+60176&output=embed"></iframe>
+					</div>
+				</aside>
 			</div>
 		</div>
 	</section>
-
+	</main>
   <footer>
     <p>&copy; 2025 Lento Auto Repair. All rights reserved.</p>
   </footer>
